@@ -1,9 +1,21 @@
-# 3. Multiplication Table of 'n' upto 20 multiples
+multiplication_table <- function(n = 12, columns = 3) { cat("\nMultiplication Tables:\n\n")
 
-n <- as.integer(readline("Enter a number: "))
+table_rows <- ceiling(n / columns)  # Number of rows per column set
 
-cat(sprintf("\nMultiplication Table of %d upto 20:\n\n", n))
+for (row in 1:table_rows) { for (col in 0:(columns - 1)) { num <- row + col * table_rows if (num <= n) { cat(sprintf("Multiplication Table for %d:", num), "\t\t") } } cat("\n")
 
-for(i in 1:20) {
-  cat(sprintf("%d X %d = %d\n", n, i, n*i))
+for (j in 1:n) {
+  for (col in 0:(columns - 1)) {
+    num <- row + col * table_rows
+    if (num <= n) {
+      cat(sprintf("%d x %d = %d", num, j, num * j), "\t\t")
+    }
+  }
+  cat("\n")
 }
+cat("\n")
+
+} }
+
+multiplication_table()
+
