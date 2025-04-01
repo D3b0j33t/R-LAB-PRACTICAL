@@ -24,3 +24,6 @@ cat("\nv. After adding two 23-year-olds:")
 cat("\n  New mean:", mean(new_ages))
 cat("\n  New median:", median(new_ages))
 cat("\n  New mode:", get_mode(new_ages), "\n")
+
+
+

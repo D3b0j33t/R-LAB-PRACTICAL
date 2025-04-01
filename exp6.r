@@ -1,4 +1,5 @@
 # 6. Palindrome Check
+
 is_palindrome <- function(s) {
   s <- gsub(" ", "", tolower(s))
   return(all(unlist(strsplit(s, "")) == rev(unlist(strsplit(s, "")))))
@@ -11,3 +12,4 @@ if (is_palindrome(input_string)) {
 } else {
   cat("The string is not a palindrome.\n")
 }
+

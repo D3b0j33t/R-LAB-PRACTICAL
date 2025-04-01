@@ -1,4 +1,5 @@
 # Define a function to find the maximum number
+
 find_max <- function(numbers) {
   return(max(numbers))
 }
@@ -12,3 +13,6 @@ max_value <- find_max(user_input)
 
 # Display the maximum value
 cat(sprintf("The maximum value is: %d\n", max_value))
+
+
+

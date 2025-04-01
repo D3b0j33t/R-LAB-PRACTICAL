@@ -20,3 +20,4 @@ if (index != -1) {
 } else {
   cat("Number not found in the list.\n")
 }
+

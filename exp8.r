@@ -10,7 +10,6 @@ binary_search <- function(vec, target) {
   # Continue searching until the left pointer is greater than or equal to the right pointer
   while (left <= right) {
     mid <- floor((left + right) / 2)  # Calculate middle index
-    
     if (vec[mid] == target) {
       return(mid)  # Target found, return the index
     } else if (vec[mid] < target) {
@@ -27,9 +26,7 @@ cat("Enter a list of numbers: ")
 vec <- scan("", what = numeric(), quiet = TRUE)
 
 cat("Sorted list of numbers: ", sort(vec), "\n")
-
 target <- as.numeric(readline(prompt = "Enter the number to search: "))
-
 index <- binary_search(vec, target)
 
 if (index != -1) {
@@ -37,3 +34,4 @@ if (index != -1) {
 } else {
   cat("Number not found in the list.\n")
 }
+
